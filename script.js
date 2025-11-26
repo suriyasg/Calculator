@@ -32,7 +32,7 @@ function evaluateExpression() {
         const operand2 = Number(expression.slice(index+1, expression.length))
         const operation = expression.at(index)
 
-        return calculate(operand1, operand2, operation)
+        return String(calculate(operand1, operand2, operation))
     }
     return expression
 }

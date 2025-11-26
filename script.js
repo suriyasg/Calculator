@@ -3,7 +3,7 @@ const expressionElement = document.getElementById("display");
 let expression = ""
 
 function appendToExpression(value) {
-    if(expression.length === 0 && value.search(/[+,\-,x,\%,÷]/) !== -1) {
+    if(expression.length === 0 && isOperator(value)) {
         alert("Can not enter these +,-,x,%,÷ operators first!")
         return
     }
@@ -13,6 +13,10 @@ function appendToExpression(value) {
         return
     }
 
+    if(isOperator(value) && isOperator(expression.at(expression.length-1))) {
+        alert("Can not enter operators back to back!")
+        return
+    }
 
     if(value === '=') {
         expression = evaluateExpression()
@@ -59,4 +63,8 @@ function calculate(operand1, operand2, operation) {
             expression = ""
             alert("Can not find operation")
     }
+}
+
+function isOperator(value) {
+    return value.search(/[+,\-,x,\%,÷]/) !== -1
 }

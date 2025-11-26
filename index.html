@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- using outsourced font to include arithmetic symbols in seven seg style display -->
+     <!-- https://www.cdnfonts.com/seven-segment.font -->
+    <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+                
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="calculator">
+        <div id="display" class="display-container">
+
+        </div>
+
+        <div class="keyboard">
+            <div id="%" class="key key-pale-green" onclick="appendToExpression('%')">%</div>
+            <div id="sqrt" class="key key-pale-green" onclick="appendToExpression('√')" >√</div>
+            <div id="ce" class="key key-ogrange" onclick="appendToExpression('CE')" >CE</div>
+            <div id="c" class="key key-ogrange" onclick="appendToExpression('C')" >C</div>
+
+            <div id="7" class="key" onclick="appendToExpression('7')" >7</div>
+            <div id="8" class="key" onclick="appendToExpression('8')" >8</div>
+            <div id="9" class="key" onclick="appendToExpression('9')" >9</div>
+            <div id="-" class="key key-pale-green" onclick="appendToExpression('-')" >-</div>
+            
+            <div id="4" class="key" onclick="appendToExpression('4')">4</div>
+            <div id="5" class="key" onclick="appendToExpression('5')">5</div>
+            <div id="6" class="key" onclick="appendToExpression('6')">6</div>
+            <div id="/" class="key key-pale-green" onclick="appendToExpression('÷')">÷</div>
+
+            <div id="1" class="key" onclick="appendToExpression('1')">1</div>
+            <div id="2" class="key" onclick="appendToExpression('2')">2</div>
+            <div id="3" class="key" onclick="appendToExpression('3')">3</div>
+            <div id="*" class="key key-pale-green" onclick="appendToExpression('x')">x</div>
+
+            <div id="0" class="key" onclick="appendToExpression('0')">0</div>
+            <div id="." class="key" onclick="appendToExpression('.')">.</div>
+            <div id="=" class="key key-pale-green" onclick="appendToExpression('=')">=</div>
+            <div id="+" class="key key-pale-green" onclick="appendToExpression('+')">+</div>
+        </div>
+    </div>
+</body>
+</html>

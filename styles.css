@@ -1,0 +1,109 @@
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    background-color: black;
+    height: 75vh;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.display-container {
+    border-top: 20px solid black;
+    border-bottom: 10px solid black;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    display: grid;
+    align-items: center;
+    /* grid-template-columns: auto auto auto auto auto auto auto auto auto; */ /* only for seven seg display*/ 
+    background-color: rgb(156, 183, 156);
+    height: 15vh;
+    border-radius: 10%;
+    font-size: xx-large;
+    text-align: right;
+    /* font-family: 'Codystar'; */
+    /* font-family: 'Digital-7'; */
+    font-family: 'Seven Segment';
+}
+
+.singleDigit {
+    background-color: rgb(156, 183, 156);
+    width: 20px;
+    height: 5vh;
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.keyboard {
+    background-color: rgb(0, 0, 0);
+    height: 60vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.key {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    margin: 2px;
+    border-radius: 10px;
+}
+
+.key-pale-green {
+    background-color: rgb(222, 238, 220);
+}
+
+.key-ogrange {
+    background-color: rgb(255, 162, 0);
+}
+
+/* Digital Number related */
+.horizondalLine {
+    border-top: 2px solid black;
+    width: 15px;
+    margin: 1px;
+}
+
+.leftVerticalLine {
+    border-left: 2px solid black;
+    height: 10px;
+    margin: 1px;
+    padding: 0;
+}
+
+.rightVerticalLine {
+    border-right: 2px solid black;
+    height: 10px;
+    margin: 1px;
+    padding: 0;
+}
+
+.doubleVerticalLine {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    height: 10px;
+    margin: 1px;
+    padding: 0;
+}
+
+.end {
+    float: right;
+}
+
+.hidden {
+    border-color: transparent; 
+}
+
+.dot {
+    font-size: 100px;
+    line-height: 100px;
+    margin-bottom: 20px;
+}

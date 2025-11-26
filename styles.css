@@ -61,12 +61,24 @@ body {
     height: auto;
 }
 
+.key:hover {
+    background-color: rgb(213, 212, 212);
+}
+
 .key-pale-green {
     background-color: rgb(222, 238, 220);
 }
 
+.key-pale-green:hover {
+    background-color: rgb(201, 214, 199);
+}
+
 .key-ogrange {
     background-color: rgb(255, 162, 0);
+}
+
+.key-ogrange:hover {
+    background-color: rgb(228, 145, 2);
 }
 
 /* Digital Number related */

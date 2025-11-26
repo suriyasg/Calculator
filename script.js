@@ -8,6 +8,12 @@ function appendToExpression(value) {
         return
     }
 
+    if(value.search(/[√]/) !== -1) {
+        alert("Square root functionality not added Try others!")
+        return
+    }
+
+
     if(value === '=') {
         expression = evaluateExpression()
     }

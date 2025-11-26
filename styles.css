@@ -111,3 +111,25 @@ body {
     line-height: 100px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+    .calculator {
+        width: 90%; 
+        height: 90vh; /* Make it slightly taller on mobile */
+    }
+
+    .display-container {
+        font-size: 1.5rem;
+        height: 12vh;
+    }
+
+    .key {
+        padding: 5px;
+        font-size: 1.5rem; 
+    }
+    
+    .keyboard {
+        height: 70vh;
+        gap: 5px;
+    }
+}

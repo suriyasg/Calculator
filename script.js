@@ -76,11 +76,23 @@ function splitExpression(expression) {
 // s 25 s s s + s 1 s
 
 function evaluateArray(array) {
-    // DMAS
+    // Modulo + DMAS
     // let index = array.findIndex('/')
-    let index = seekIndex(array, '/')
+
+    let index = seekIndex(array, '%')
     let rightHandIndex = undefined
     let leftHandIndex = undefined
+    while(index !== -1) {
+        rightHandIndex = findRightOperand(index, array)
+        leftHandIndex = findLeftOperand(index, array)
+        array[index] = array[leftHandIndex] %  array[rightHandIndex]
+        array[rightHandIndex] = 's'
+        array[leftHandIndex] = 's'
+        index = seekIndex(array, '%')
+        console.log(array, '%')
+    }
+
+    index = seekIndex(array, '/') 
     while(index !== -1) {
         rightHandIndex = findRightOperand(index, array)
         leftHandIndex = findLeftOperand(index, array)
@@ -98,6 +110,7 @@ function evaluateArray(array) {
         array[rightHandIndex] = 's'
         array[leftHandIndex] = 's'
         index = seekIndex(array, 'x')
+        console.log(array, 'x')
     }
 
     index = seekIndex(array, '+')
